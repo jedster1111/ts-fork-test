@@ -1,6 +1,5 @@
 import path from "path";
 import merge from "webpack-merge";
-import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
 import ForkTsCheckerNotifierWebpackPlugin from "fork-ts-checker-notifier-webpack-plugin";
 import webpack from "webpack";
 import common from "./webpack.common";
@@ -14,7 +13,6 @@ const config = merge(common, {
         open: true,
     },
     plugins: [
-        new ForkTsCheckerWebpackPlugin({ eslint: true }),
         new ForkTsCheckerNotifierWebpackPlugin({
             title: "TypeScript",
             excludeWarnings: false,
